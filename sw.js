@@ -1,5 +1,5 @@
 /* --- Rüzgar Portfolio SW (network-first HTML, cache-first static) --- */
-const VERSION = 'v5';                                // 🔁 deploy'da artır
+const VERSION = 'v6';                                // 🔁 deploy'da artır
 const CACHE_NAME = `rzr-cache-${VERSION}`;
 const SCOPE_URL = new URL(self.registration.scope);  // GH Pages alt-dizinine uyum
 const U = (p) => new URL(p, SCOPE_URL).pathname;     // /kullanici/repo/... üretir
@@ -12,8 +12,7 @@ const CORE_ASSETS = [
   U('faviconn.png'),
   U('icon-192.png'),
   U('icon-512.png'),
-  U('profile.png'),        // varsa
-  U('resume.pdf')          // varsa
+  U('profile.png')
 ];
 
 self.addEventListener('install', (event) => {
